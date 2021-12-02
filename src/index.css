@@ -20,6 +20,7 @@
 }
 .navbar .links {
   margin-left: auto;
+  margin-right: 25px;
 }
 .navbar a {
   margin-left: 16px;
@@ -59,7 +60,7 @@
 
 .content{
   margin-left: 350px;
-  margin-right: 350px;
+  margin-right: 370px;
   text-align: left;
   max-width: 600px;
 }
@@ -225,16 +226,17 @@
   width: 170px;
 }
 
+
 .assignment-preview {
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .assignment-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 3px 5px rgba(71, 55, 55, 0.1);
 }
 .assignment-preview h2 {
   font-size: 20px;
@@ -264,4 +266,20 @@
   background-color: #eeeeee;
   color: #630BFF;
   display: inline-block;
+}
+
+.assignment-edit img{
+  margin-right: 20px;
+  height: 20px;
+  width: 20px;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.assignment-preview-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* justify-content: center; */
 }
