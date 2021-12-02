@@ -41,6 +41,7 @@ const Home = () => {
 
     return (
         <div className="home">
+            <h1>ASSIGNMENTS</h1>
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
             {assignments && <AssignmentList assignments={assignments} />}

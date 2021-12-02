@@ -28,7 +28,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #630BFF;
 }
 
 .heading-container {
@@ -71,6 +71,15 @@
   font-size: 25px;
 }
 
+
+/*In Home*/
+.home h1{
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: #B8B298;
+}
 
 /*For Construct*/
 .question-assignment {
@@ -229,7 +238,8 @@
 
 .assignment-preview {
   padding: 10px 16px;
-  margin: 20px 0;
+  /* margin: 20px 0; */
+  margin-bottom: 20px;
   border-bottom: 1px solid #fafafa;
   border-radius: 15px;
   background-color: white;
