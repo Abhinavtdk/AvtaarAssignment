@@ -180,3 +180,25 @@
   margin-right: 7px;
 }
 
+.submit-assignment{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-assignment button{
+  background: #630BFF;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 15px;
+  height: 40px;
+  width: 150px;
+}
+

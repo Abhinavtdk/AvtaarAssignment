@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import axios from 'axios'
 
 const Create = () => {
 
+
+    const baseURL = ' https://qa-api.avtaar.me//avtaar/demo'
 
     //constructStates
     const [isSDLC, setisSDLC] = useState(false)
@@ -18,29 +21,6 @@ const Create = () => {
         setisOther(!isOther)
     }
 
-    const onsubmitConstructs = (e) => {
-        e.preventDefault()
-        console.log(isSDLC)
-        console.log(isOther)
-        console.log(isProgramming)
-
-        let checkArray = [];
-        if (isSDLC === true) {
-            checkArray.push("SDLC");
-        }
-        if (isProgramming === true) {
-            checkArray.push("Programming");
-        }
-        if (isOther === true) {
-            checkArray.push("Other");
-        }
-        console.log(checkArray)
-
-        let checkData = {
-            checkbox: checkArray.toString()
-        };
-    }
-
     //cohortStates
     const [isJune, setisJune] = useState(false)
     const [isAugust, setisAugust] = useState(false)
@@ -52,53 +32,94 @@ const Create = () => {
         setisAugust(!isAugust)
     }
 
-    const onsubmitCohorts = (e) => {
-        e.preventDefault()
-
-        let checkArray = [];
-        if (isJune === true) {
-            checkArray.push("JUNcohort1");
-        }
-        if (isAugust === true) {
-            checkArray.push("AUGcohort3");
-        }
-        console.log(checkArray)
-
-        let checkData = {
-            checkbox: checkArray.toString()
-        };
-    }
-
     //titleStates
     const [assignmentTitle, setAssignmentTitle] = useState(null)
-    const onsubmitTitle = (e) => {
-        e.preventDefault()
-
-        console.log(assignmentTitle)
-    }
-
 
     //descriptionStates
     const [description, setDescription] = useState(null)
-    const onsubmitDescription = (e) => {
-        e.preventDefault()
-
-        console.log(description)
-    }
 
     //imageStates
     const [image, setImage] = useState(null)
-    const onSubmitImage = (e) => {
-        e.preventDefault()
-        console.log(image)
-    }
 
     //referenceStates
     const [referenceLink, setReferenceLink] = useState(null)
     const [referenceName, setReferenceName] = useState(null)
-    const onSubmitReference = (e) => {
-        e.preventDefault()
-        console.log({ referenceLink, referenceName })
+
+    //Submit
+    const handleSubmitAssignment = () => {
+
+        let constructArray = [];
+        if (isSDLC === true) {
+            constructArray.push("SDLC");
+        }
+        if (isProgramming === true) {
+            constructArray.push("Programming");
+        }
+        if (isOther === true) {
+            constructArray.push("Other");
+        }
+
+        let cohortArray = [];
+        if (isJune === true) {
+            cohortArray.push("JUNcohort1");
+        }
+        if (isAugust === true) {
+            cohortArray.push("AUGcohort3");
+        }
+
+        let mediaArray = [];
+        if (image !== null && image !== "") {
+            const mediaObj = {
+                type: "IMAGE",
+                image: {
+                    link: image.toString()
+                }
+            }
+            mediaArray.push(mediaObj)
+        }
+
+        let referenceArray = [];
+        if (referenceLink !== null && referenceLink !== ""
+            && referenceName !== null && referenceName !== "") {
+            const mediaObj = {
+                type: "URL",
+                url: {
+                    link: referenceLink.toString()
+                }
+            }
+            referenceArray.push({
+                name: referenceName.toString(),
+                media: mediaObj
+            })
+        }
+
+        const assignment = {
+            title: assignmentTitle && assignmentTitle.toString(),
+            description: description && description.toString(),
+            constructs: constructArray,
+            cohorts: cohortArray,
+            careerName: "Full Stack Developer",
+            medias: mediaArray,
+            referenceList: referenceArray
+        }
+
+        // axios.get(baseURL+'/assignments',{
+        //     headers:{
+        //         demoKey : 'jsmp35gxqi78'
+        //     }
+        // }).then((response)=>{
+        //     console.log(response.data)
+        // })
+
+        axios.post(baseURL + '/assignment',
+            assignment,
+            {
+                headers: { demoKey: 'jsmp35gxqi78' }
+            }).then((response)=>{
+                console.log(response.data)
+            })
+
+        console.log(assignment)
     }
 
 
@@ -113,7 +134,7 @@ const Create = () => {
                     <h2>Which of the folllowing constructs will the assignment cover?*</h2>
                 </div>
 
-                <form onSubmit={onsubmitConstructs}>
+                <form>
                     <div className="form-check">
                         <label className="form-check-label">
                             <input type="checkbox"
@@ -146,14 +167,6 @@ const Create = () => {
                             Other
                         </label>
                     </div>
-
-
-
-                    <div className="form-group">
-                        <button className="btn btn-success">
-                            Save
-                        </button>
-                    </div>
                 </form>
 
 
@@ -161,13 +174,12 @@ const Create = () => {
 
 
             {/*Cohort*/}
-
             <div className="question-assignment">
                 <div className="question-assignment-title">
                     <h2>Which cohort is the assignment meant for?*</h2>
                 </div>
 
-                <form onSubmit={onsubmitCohorts}>
+                <form>
                     <div className="form-check">
                         <label className="form-check-label">
                             <input type="checkbox"
@@ -189,12 +201,6 @@ const Create = () => {
                             AUGcohort3
                         </label>
                     </div>
-
-                    <div className="form-group">
-                        <button className="btn btn-success">
-                            Save
-                        </button>
-                    </div>
                 </form>
 
 
@@ -213,14 +219,6 @@ const Create = () => {
                         onChange={(e) => setAssignmentTitle(e.target.value)}
                     />
                 </div>
-                <form onSubmit={onsubmitTitle}>
-                    <div className="form-group">
-                        <button className="btn btn-success">
-                            Save
-                        </button>
-                    </div>
-                </form>
-
             </div>
 
 
@@ -237,14 +235,6 @@ const Create = () => {
                         onChange={(e) => setDescription(e.target.value)}
                     />
                 </div>
-                <form onSubmit={onsubmitDescription}>
-                    <div className="form-group">
-                        <button className="btn btn-success">
-                            Save
-                        </button>
-                    </div>
-                </form>
-
             </div>
 
             {/*Image*/}
@@ -260,14 +250,6 @@ const Create = () => {
                         onChange={(e) => setImage(e.target.value)}
                     />
                 </div>
-                <form onSubmit={onSubmitImage}>
-                    <div className="form-group">
-                        <button className="btn btn-success">
-                            Save
-                        </button>
-                    </div>
-                </form>
-
             </div>
 
             {/*References*/}
@@ -293,15 +275,12 @@ const Create = () => {
                         onChange={(e) => setReferenceName(e.target.value)}
                     />
                 </div>
-                <form onSubmit={onSubmitReference}>
-                    <div className="form-group">
-                        <button className="btn btn-success">
-                            Save
-                        </button>
-                    </div>
-                </form>
-
             </div>
+
+            <div className="submit-assignment">
+                <button onClick={handleSubmitAssignment}>Add Assignment</button>
+            </div>
+
 
         </div>
     );
