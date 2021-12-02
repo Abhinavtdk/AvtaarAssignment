@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/AvtaarAssignment/static/css/main.fa7c0e0e.chunk.css",
-    "main.js": "/AvtaarAssignment/static/js/main.d7776daa.chunk.js",
-    "main.js.map": "/AvtaarAssignment/static/js/main.d7776daa.chunk.js.map",
+    "main.css": "/AvtaarAssignment/static/css/main.33def45f.chunk.css",
+    "main.js": "/AvtaarAssignment/static/js/main.d6934bd2.chunk.js",
+    "main.js.map": "/AvtaarAssignment/static/js/main.d6934bd2.chunk.js.map",
     "runtime-main.js": "/AvtaarAssignment/static/js/runtime-main.2ac8a315.js",
     "runtime-main.js.map": "/AvtaarAssignment/static/js/runtime-main.2ac8a315.js.map",
-    "static/js/2.7ae77c5e.chunk.js": "/AvtaarAssignment/static/js/2.7ae77c5e.chunk.js",
-    "static/js/2.7ae77c5e.chunk.js.map": "/AvtaarAssignment/static/js/2.7ae77c5e.chunk.js.map",
+    "static/js/2.36afa550.chunk.js": "/AvtaarAssignment/static/js/2.36afa550.chunk.js",
+    "static/js/2.36afa550.chunk.js.map": "/AvtaarAssignment/static/js/2.36afa550.chunk.js.map",
     "static/js/3.8882deb3.chunk.js": "/AvtaarAssignment/static/js/3.8882deb3.chunk.js",
     "static/js/3.8882deb3.chunk.js.map": "/AvtaarAssignment/static/js/3.8882deb3.chunk.js.map",
     "index.html": "/AvtaarAssignment/index.html",
-    "static/css/main.fa7c0e0e.chunk.css.map": "/AvtaarAssignment/static/css/main.fa7c0e0e.chunk.css.map",
-    "static/js/2.7ae77c5e.chunk.js.LICENSE.txt": "/AvtaarAssignment/static/js/2.7ae77c5e.chunk.js.LICENSE.txt"
+    "static/css/main.33def45f.chunk.css.map": "/AvtaarAssignment/static/css/main.33def45f.chunk.css.map",
+    "static/js/2.36afa550.chunk.js.LICENSE.txt": "/AvtaarAssignment/static/js/2.36afa550.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2ac8a315.js",
-    "static/js/2.7ae77c5e.chunk.js",
-    "static/css/main.fa7c0e0e.chunk.css",
-    "static/js/main.d7776daa.chunk.js"
+    "static/js/2.36afa550.chunk.js",
+    "static/css/main.33def45f.chunk.css",
+    "static/js/main.d6934bd2.chunk.js"
   ]
 }
