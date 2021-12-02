@@ -1,0 +1,164 @@
+.create-assignment{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.add-assignment-title h1{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  
+/*For Construct*/
+.question-assignment {
+    background-color:white;
+    width: 650px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .question-assignment-title h2{
+    padding-top: 20px;
+    padding-bottom: 23px;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .form-check {
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .form-check-label {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .form-check-input{
+    margin-right: 10px;
+    height: 17px;
+    width: 17px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /*For Title*/
+  .question-assignment-title-exc h2{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .assignment-title-text input{
+    width: 95%;
+    padding: 2px 2px;
+    margin: 0 0;
+    height: 20px;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    display: block;
+    font-size: 17px;
+  }
+  
+  .assignment-title-text input:focus{
+    outline: none;
+  }
+  
+  
+  .assignment-text-reference {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  
+  .assignment-text-reference input{
+    width: 84%;
+    padding: 2px 2px;
+    margin: 0 0;
+    height: 20px;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    display: block;
+    font-size: 17px;
+  }
+  
+  .assignment-text-reference input:focus{
+    outline: none;
+  }
+  
+  .assignment-text-reference h2{
+    padding-bottom: 15px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 7px;
+  }
+  
+  
+  .assignment-text-reference-name {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  
+  .assignment-text-reference-name input{
+    width: 62.5%;
+    padding: 2px 2px;
+    margin: 0 0;
+    height: 20px;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    display: block;
+    font-size: 17px;
+  }
+  
+  .assignment-text-reference-name input:focus{
+    outline: none;
+  }
+  
+  .assignment-text-reference-name h2{
+    padding-bottom: 15px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 7px;
+  }
+  
+  .submit-assignment{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .submit-assignment button{
+    background: #630BFF;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: center;
+    font-size: 15px;
+    height: 40px;
+    width: 170px;
+  }  

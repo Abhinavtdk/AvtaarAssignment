@@ -1,0 +1,58 @@
+
+.assignment-preview {
+    padding: 10px 16px;
+    /* margin: 20px 0; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fafafa;
+    border-radius: 15px;
+    background-color: white;
+    /* cursor: pointer; */
+  }
+  .assignment-preview:hover {
+    box-shadow: 1px 3px 5px rgba(71, 55, 55, 0.1);
+  }
+  .assignment-preview h2 {
+    font-size: 20px;
+    /* color: #f1356d; */
+    margin-bottom: 8px;
+  }
+  .assignment-preview a {
+    text-decoration: none;
+  }
+  
+  .assignment-preview p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+  } 
+  
+  .assignment-preview .career-name{
+    font-size: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    background-color: #eeeeee;
+    color: #630BFF;
+    display: inline-block;
+  }
+  
+  .assignment-edit img{
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .assignment-preview-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: center; */
+  }

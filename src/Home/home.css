@@ -1,0 +1,70 @@
+.home h1{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: #B8B298;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .filters{
+    margin-right: 10px;
+  }
+
+  .filter-choices {
+    padding: 10px 16px;
+    /* margin: 20px 0; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fafafa;
+    border-radius: 15px;
+    background-color: white;
+    width: 150px;
+  }
+
+  .filter-title h2{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .add-assignment{
+    padding: 10px 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* margin: 20px 0; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fafafa;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .add-assignment img{
+    height: 25px;
+    width: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .add-assignment h2{
+    color: #630BFF;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    align-self: center;
+    text-decoration: none;
+  }
+
+  .assignment-list{
+    text-decoration: none;
+  }

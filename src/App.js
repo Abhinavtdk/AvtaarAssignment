@@ -1,20 +1,16 @@
 import logo_avtaar from './logo_avtaar.jpg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Create from './Create';
-import Home from './Home';
+import Create from './Create/Create';
+import Home from './Home/Home';
 import NotFound from './NotFound';
 import NavBar from './NavBar';
-import Edit from './Edit';
+import Edit from './Edit/Edit';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <div className="heading-container">
-          <img src={logo_avtaar} />
-          <h3>Avtaar Assignment</h3>
-        </div> */}
         <NavBar />
         <div className="content-container">
           <div className="content">

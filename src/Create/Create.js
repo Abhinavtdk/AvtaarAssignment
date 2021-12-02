@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import './create.css'
 import { useHistory } from "react-router-dom";
 
 
@@ -106,14 +107,6 @@ const Create = () => {
             medias: mediaArray,
             referenceList: referenceArray
         }
-
-        // axios.get(baseURL+'/assignments',{
-        //     headers:{
-        //         demoKey : 'jsmp35gxqi78'
-        //     }
-        // }).then((response)=>{
-        //     console.log(response.data)
-        // })
 
         axios.post(baseURL + '/assignment',
             assignment,
