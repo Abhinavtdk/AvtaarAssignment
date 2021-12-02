@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import { useHistory } from "react-router-dom";
+
 
 const Create = () => {
-
 
     const baseURL = ' https://qa-api.avtaar.me//avtaar/demo'
 
@@ -10,6 +11,9 @@ const Create = () => {
     const [isSDLC, setisSDLC] = useState(false)
     const [isProgramming, setisProgramming] = useState(false)
     const [isOther, setisOther] = useState(false)
+    const [isPending, setIsPending] = useState(false);
+    const history = useHistory();
+
 
     const onChangeSDLC = () => {
         setisSDLC(!isSDLC)
@@ -47,7 +51,7 @@ const Create = () => {
 
     //Submit
     const handleSubmitAssignment = () => {
-
+        setIsPending(true)
         let constructArray = [];
         if (isSDLC === true) {
             constructArray.push("SDLC");
@@ -117,6 +121,8 @@ const Create = () => {
                 headers: { demoKey: 'jsmp35gxqi78' }
             }).then((response)=>{
                 console.log(response.data)
+                setIsPending(false)
+                history.push('/')
             })
 
         console.log(assignment)
@@ -129,6 +135,7 @@ const Create = () => {
                 <h1>Add an assignment</h1>
             </div>
 
+            {/*Constructs*/}
             <div className="question-assignment">
                 <div className="question-assignment-title">
                     <h2>Which of the folllowing constructs will the assignment cover?*</h2>
@@ -278,7 +285,9 @@ const Create = () => {
             </div>
 
             <div className="submit-assignment">
-                <button onClick={handleSubmitAssignment}>Add Assignment</button>
+                {/* <button onClick={handleSubmitAssignment}>Add Assignment</button> */}
+                {!isPending && <button onClick={handleSubmitAssignment}>Add Assignment</button>}
+                {isPending && <button disabled>Adding Assignment...</button>}
             </div>
 
 
