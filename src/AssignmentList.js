@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
 import write from './write.png'
+import { useState } from "react";
 
 const AssignmentList = (props) => {
 
     const assignments = props.assignments
     const title = props.title
+
+    // const [id, setid] = useState(null)
+
+
+    const handleOnClick = (id) =>{
+        if(id!== null){
+            console.log(id)
+        }
+    }
 
     return (
         <div className="assignment-list">
@@ -15,10 +25,10 @@ const AssignmentList = (props) => {
                         <div className="career-name">
                             {assignment.careerName}
                         </div>
-                        {/* <Link to={'/assignments/' + assignment.activity_id}> */}
-                        <Link to={'/create'}>
+                        <Link to={'/assignments/' + assignment.activity_id}>
+                        {/* <Link to={'/create'}> */}
                             <div className="assignment-edit">
-                                <img src={write} />
+                                <img src={write} onClick={() => {handleOnClick(assignment.activity_id)}} />
                             </div>
                         </Link>
                     </div>

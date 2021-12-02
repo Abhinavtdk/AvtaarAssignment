@@ -5,6 +5,7 @@ import Create from './Create';
 import Home from './Home';
 import NotFound from './NotFound';
 import NavBar from './NavBar';
+import Edit from './Edit';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
                 <Create />
               </Route>
               <Route path="/assignments/:id">
-                <Create />
+                <Edit />
               </Route>
               <Route path="*">
                 <NotFound />
